@@ -31,7 +31,7 @@ jobs:
         name: bandit-findings
         path: bandit-report.json
         
-  image-scan:
+  image_scan:
     name: Build Image and Run Image Scan 
     runs-on: ubuntu-latest
 
@@ -43,7 +43,7 @@ jobs:
       uses: docker-practice/actions-setup-docker@v1
       with: 
         docker_version: '20.10.7'
-
+        
     - name: Build Docker Image
       run: docker build -f Dockerfile -t myapp:latest .
       
